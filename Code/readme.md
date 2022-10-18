@@ -6,6 +6,15 @@
 
 ## Steps to run: 
 ```
+# Create build directory and switch into it
+mkdir -p build && cd build
+
+# Configure
+cmake -DOPENCV_EXTRA_MODULES_PATH=../opencv_contrib-4.x/modules ../opencv
+
+#Build
+cmake --build .
+
 cd <directory_of_repo>/Code
 bash run_detector.sh
 ```
