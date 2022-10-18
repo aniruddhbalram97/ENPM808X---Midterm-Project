@@ -22,7 +22,10 @@ For human recognition and tracking, we will use the robust YOLOv3 neural network
 
 
 ### UML Diagram:
-![alt text](./UML_Diagram/Class_Diagram.png)
+![alt text](./UML_Diagram/Class_DiagramV2.png)
 
 ### Activity Diagram:
 ![alt text](./UML_Diagram/Activity_Diagram.png)
+
+###Updates
+Updated UML Class Diagram
