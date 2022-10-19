@@ -23,7 +23,6 @@ We are seeking to create this tracker utilizing a monocular camera, directly usa
 
 For human recognition and tracking, we will use the robust YOLOv3 neural network model trained on the COCO dataset, which is one of the most accurate real-time object detection techniques. 
 
-
 ### UML Diagram:
 ![alt text](./UML_Diagram/Class_DiagramV2.png)
 
@@ -32,30 +31,33 @@ For human recognition and tracking, we will use the robust YOLOv3 neural network
 
 ### Tasks complete
 
-IB: 1.101 Get preprocessing working 
-IB: 1.102 Get postprocessing working 
-IB: 1.103 Setup coverCV 
-IB: 1.105 Create an iteration development branch/ development branch 
-IB: 1.106 Select and add a software license as a file named LICENSE 
-IB: 1.107 Update UML 
-IB: 1.110 Update readme 
-IB: 1.112 Create classes for program 
-IB: 1.113 Implement cpplint and cppcheck 
-IB: 1.114 Create proper comments and revise old ones 
-IB: 1.115 Update Cmake
+IB: 1.101 Get preprocessing working, 
+IB: 1.102 Get postprocessing working,
+IB: 1.103 Setup coverCV, 
+IB: 1.105 Create an iteration development branch/ development branch, 
+IB: 1.106 Select and add a software license as a file named LICENSE, 
+IB: 1.107 Update UML,
+IB: 1.110 Update readme,  
+IB: 1.112 Create classes for program,  
+IB: 1.113 Implement cpplint and cppcheck,  
+IB: 1.114 Create proper comments and revise old ones,  
+IB: 1.115 Update Cmake, 
 
 ### Task completed partially (Might contains errors due to  build method):
 
-IB: 1.108 Create a docs directory with generated Doxygen files
+IB: 1.108 Create a docs directory with generated Doxygen files, 
 IB: 1.104 Setup Github CI
 ### Task incomplete: 
 
-IB: 1.109 Create unit tests and test coverage 
+IB: 1.109 Create unit tests and test coverage, 
 IB: 1.111 URL of a 3 minute (max) video explaining the Phase 1 status of your API 
 
 ### Spreedsheet and Sprint Meeting Document Link
+
 Spreadsheet link: https://docs.google.com/spreadsheets/d/1zVApmpAVnc7thu606UrYKJ7nqtlWpkH1Bv99EHn_2Is/edit?usp=sharing 
+
 Sprint Meeting Document Link: https://docs.google.com/document/d/154Ga8EMY9PfcyO2QEEYlObfffHEXi2clT9GDjFAgel4/edit?usp=sharing
+
 ### Notes
 Doxyfile is found in Code/doc_directory/Doxyfile 
 Program is unable to run on 2 team members machines, most likely incorrect installation in the computer
