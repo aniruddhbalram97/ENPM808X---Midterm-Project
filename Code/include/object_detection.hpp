@@ -16,7 +16,7 @@
 #include <opencv2/opencv.hpp>
 
 /**
- * @brief Used to generata blobes and get their dimensions
+ * @brief Used to generata blobs and get their dimensions
  * 
  */
 class BlobGenerator {
@@ -39,7 +39,7 @@ class BlobGenerator {
 
 /**
  * @brief Derived from BlobGenerator by inheritance, this class is used to detect humans in an image.
- * This includes methods to draw bounding boxes, creating labels, blob conversion and post-processing  
+ * This includes methods to draw bounding boxes, creating labels, blob conversion and post-processing.  
  */
 class HumanObjectDetector: public BlobGenerator {
  private:
