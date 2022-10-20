@@ -1,0 +1,30 @@
+# cpplint on app/main.cpp
+main.cpp:22:  Static/global string variables are not permitted.  [runtime/string] [4]
+main.cpp:25:  Static/global string variables are not permitted.  [runtime/string] [4]
+Done processing main.cpp
+Total errors found: 2
+
+#cpplint on app/human_object_detector.cpp
+human_object_detector.cpp:38:  Is this a non-const reference? If so, make const or use a pointer: cv::Mat &image_in  [runtime/references] [2]
+human_object_detector.cpp:39:  Static/global string variables are not permitted.  [runtime/string] [4]
+human_object_detector.cpp:69:  Is this a non-const reference? If so, make const or use a pointer: cv::dnn::Net &net  [runtime/references] [2]
+human_object_detector.cpp:86:  Is this a non-const reference? If so, make const or use a pointer: std::vector<cv::Mat> &preprocessed_data  [runtime/references] [2]
+human_object_detector.cpp:87:  Is this a non-const reference? If so, make const or use a pointer: cv::Mat& image_in  [runtime/references] [2]
+human_object_detector.cpp:157:  Is this a non-const reference? If so, make const or use a pointer: cv::Mat &image_in  [runtime/references] [2]
+human_object_detector.cpp:158:  Is this a non-const reference? If so, make const or use a pointer: std::vector<cv::Rect> &bounding_boxes  [runtime/references] [2]
+Done processing human_object_detector.cpp
+Total errors found: 7
+
+#cpplint on include/constants.hpp
+Done processing constants.hpp
+
+#cpplint on include/object_detection.hpp
+object_detection.hpp:31:  Is this a non-const reference? If so, make const or use a pointer: cv::Mat &image_in  [runtime/references] [2]
+object_detection.hpp:61:  Is this a non-const reference? If so, make const or use a pointer: cv::Mat& image_in  [runtime/references] [2]
+object_detection.hpp:71:  Is this a non-const reference? If so, make const or use a pointer: cv::dnn::Net &net  [runtime/references] [2]
+object_detection.hpp:81:  Is this a non-const reference? If so, make const or use a pointer: std::vector<cv::Mat>& preprocessed_data  [runtime/references] [2]
+object_detection.hpp:82:  Is this a non-const reference? If so, make const or use a pointer: cv::Mat& image_in  [runtime/references] [2]
+object_detection.hpp:95:  Is this a non-const reference? If so, make const or use a pointer: cv::Mat &image_in  [runtime/references] [2]
+object_detection.hpp:96:  Is this a non-const reference? If so, make const or use a pointer: std::vector<cv::Rect> &bounding_boxes  [runtime/references] [2]
+Done processing object_detection.hpp
+Total errors found: 7

@@ -1,0 +1,4 @@
+<map id="BlobGenerator" name="BlobGenerator">
+<area shape="rect" id="node1" title="Used to generata blobes and get their dimensions." alt="" coords="31,5,147,32"/>
+<area shape="rect" id="node2" href="$classHumanObjectDetector.html" title="Derived from BlobGenerator by inheritance, this class is used to detect humans in an image...." alt="" coords="5,80,172,107"/>
+</map>
