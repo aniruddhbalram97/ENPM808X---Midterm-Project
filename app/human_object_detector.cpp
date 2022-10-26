@@ -69,7 +69,7 @@ std::vector<cv::Mat> HumanObjectDetector:: preProcessAlgorithm(
     cv::Mat blob, cv::dnn::Net &net) {
     std::vector<cv::Mat> preprocessed_data;
     /// setting the blob as the input for the neural-network
-    net.setInput(blob);
+    net.setInput(blob);// onyn issue
     /// getUnconnectedLayersName() gets the index of the output layers
     /// for a 640x640 image, it produces a 25200 x 85 - 2D array.
     /// Each row is a prediction and the values within it tell the quality
