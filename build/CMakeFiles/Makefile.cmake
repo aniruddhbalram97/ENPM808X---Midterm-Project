@@ -12,6 +12,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.22.1/CMakeCCompiler.cmake"
   "CMakeFiles/3.22.1/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.22.1/CMakeSystem.cmake"
+  "../cmake/CodeCoverage.cmake"
   "../test/CMakeLists.txt"
   "../vendor/googletest/googletest/CMakeLists.txt"
   "../vendor/googletest/googletest/cmake/internal_utils.cmake"
@@ -138,6 +139,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/code_coverage.dir/DependInfo.cmake"
   "app/CMakeFiles/shell-app.dir/DependInfo.cmake"
   "test/CMakeFiles/cpp-test.dir/DependInfo.cmake"
   "vendor/googletest/googletest/CMakeFiles/gtest.dir/DependInfo.cmake"

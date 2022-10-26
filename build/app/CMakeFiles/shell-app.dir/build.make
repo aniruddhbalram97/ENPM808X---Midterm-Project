@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project
+CMAKE_SOURCE_DIR = /home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/build
+CMAKE_BINARY_DIR = /home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/build
 
 # Include any dependencies generated for this target.
 include app/CMakeFiles/shell-app.dir/depend.make
@@ -72,30 +72,30 @@ include app/CMakeFiles/shell-app.dir/flags.make
 app/CMakeFiles/shell-app.dir/main.cpp.o: app/CMakeFiles/shell-app.dir/flags.make
 app/CMakeFiles/shell-app.dir/main.cpp.o: ../app/main.cpp
 app/CMakeFiles/shell-app.dir/main.cpp.o: app/CMakeFiles/shell-app.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object app/CMakeFiles/shell-app.dir/main.cpp.o"
-	cd /home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/build/app && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT app/CMakeFiles/shell-app.dir/main.cpp.o -MF CMakeFiles/shell-app.dir/main.cpp.o.d -o CMakeFiles/shell-app.dir/main.cpp.o -c /home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/app/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object app/CMakeFiles/shell-app.dir/main.cpp.o"
+	cd /home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/build/app && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT app/CMakeFiles/shell-app.dir/main.cpp.o -MF CMakeFiles/shell-app.dir/main.cpp.o.d -o CMakeFiles/shell-app.dir/main.cpp.o -c /home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/app/main.cpp
 
 app/CMakeFiles/shell-app.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/shell-app.dir/main.cpp.i"
-	cd /home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/build/app && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/app/main.cpp > CMakeFiles/shell-app.dir/main.cpp.i
+	cd /home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/build/app && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/app/main.cpp > CMakeFiles/shell-app.dir/main.cpp.i
 
 app/CMakeFiles/shell-app.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/shell-app.dir/main.cpp.s"
-	cd /home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/build/app && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/app/main.cpp -o CMakeFiles/shell-app.dir/main.cpp.s
+	cd /home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/build/app && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/app/main.cpp -o CMakeFiles/shell-app.dir/main.cpp.s
 
 app/CMakeFiles/shell-app.dir/human_object_detector.cpp.o: app/CMakeFiles/shell-app.dir/flags.make
 app/CMakeFiles/shell-app.dir/human_object_detector.cpp.o: ../app/human_object_detector.cpp
 app/CMakeFiles/shell-app.dir/human_object_detector.cpp.o: app/CMakeFiles/shell-app.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object app/CMakeFiles/shell-app.dir/human_object_detector.cpp.o"
-	cd /home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/build/app && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT app/CMakeFiles/shell-app.dir/human_object_detector.cpp.o -MF CMakeFiles/shell-app.dir/human_object_detector.cpp.o.d -o CMakeFiles/shell-app.dir/human_object_detector.cpp.o -c /home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/app/human_object_detector.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object app/CMakeFiles/shell-app.dir/human_object_detector.cpp.o"
+	cd /home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/build/app && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT app/CMakeFiles/shell-app.dir/human_object_detector.cpp.o -MF CMakeFiles/shell-app.dir/human_object_detector.cpp.o.d -o CMakeFiles/shell-app.dir/human_object_detector.cpp.o -c /home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/app/human_object_detector.cpp
 
 app/CMakeFiles/shell-app.dir/human_object_detector.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/shell-app.dir/human_object_detector.cpp.i"
-	cd /home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/build/app && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/app/human_object_detector.cpp > CMakeFiles/shell-app.dir/human_object_detector.cpp.i
+	cd /home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/build/app && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/app/human_object_detector.cpp > CMakeFiles/shell-app.dir/human_object_detector.cpp.i
 
 app/CMakeFiles/shell-app.dir/human_object_detector.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/shell-app.dir/human_object_detector.cpp.s"
-	cd /home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/build/app && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/app/human_object_detector.cpp -o CMakeFiles/shell-app.dir/human_object_detector.cpp.s
+	cd /home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/build/app && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/app/human_object_detector.cpp -o CMakeFiles/shell-app.dir/human_object_detector.cpp.s
 
 # Object files for target shell-app
 shell__app_OBJECTS = \
@@ -161,18 +161,18 @@ app/shell-app: /usr/local/lib/libopencv_photo.so.4.5.1
 app/shell-app: /usr/local/lib/libopencv_imgproc.so.4.5.1
 app/shell-app: /usr/local/lib/libopencv_core.so.4.5.1
 app/shell-app: app/CMakeFiles/shell-app.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable shell-app"
-	cd /home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/build/app && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/shell-app.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable shell-app"
+	cd /home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/build/app && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/shell-app.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 app/CMakeFiles/shell-app.dir/build: app/shell-app
 .PHONY : app/CMakeFiles/shell-app.dir/build
 
 app/CMakeFiles/shell-app.dir/clean:
-	cd /home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/build/app && $(CMAKE_COMMAND) -P CMakeFiles/shell-app.dir/cmake_clean.cmake
+	cd /home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/build/app && $(CMAKE_COMMAND) -P CMakeFiles/shell-app.dir/cmake_clean.cmake
 .PHONY : app/CMakeFiles/shell-app.dir/clean
 
 app/CMakeFiles/shell-app.dir/depend:
-	cd /home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project /home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/app /home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/build /home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/build/app /home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/build/app/CMakeFiles/shell-app.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project /home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/app /home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/build /home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/build/app /home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/build/app/CMakeFiles/shell-app.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : app/CMakeFiles/shell-app.dir/depend
 

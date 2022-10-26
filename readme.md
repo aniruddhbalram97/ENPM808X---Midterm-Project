@@ -1,8 +1,8 @@
 ## Midterm - Human Object Detection
 # C++ Boilerplate Badges
-[![Build Status](https://github.com/aniruddhbalram97/ENPM808X---Midterm-Project/actions/workflows/build_and_coveralls.yml/badge.svg)](https://github.com/aniruddhbalram97/ENPM808X---Midterm-Project/actions/workflows/build_and_coveralls.yml)
+[![Build Status](https://github.com/joshuag1214/ENPM808X---Midterm-Project/actions/workflows/build_and_coveralls.yml/badge.png)](https://github.com/joshuag1214/ENPM808X---Midterm-Project/actions/workflows/build_and_coveralls.yml)
 
-[![Coverage Status](https://coveralls.io/repos/github/aniruddhbalram97/ENPM808X---Midterm-Project/badge.svg?branch=master)](https://coveralls.io/github/aniruddhbalram97/ENPM808X---Midterm-Project?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/joshuag1214/ENPM808X---Midterm-Project/badge.png?branch=master)](https://coveralls.io/github/joshuag1214/ENPM808X---Midterm-Project?branch=master)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT) 
 

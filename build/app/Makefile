@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project
+CMAKE_SOURCE_DIR = /home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/build
+CMAKE_BINARY_DIR = /home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,14 +132,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/build/CMakeFiles /home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/build/app//CMakeFiles/progress.marks
-	cd /home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/build/CMakeFiles 0
+	cd /home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/build/CMakeFiles /home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/build/app//CMakeFiles/progress.marks
+	cd /home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app/clean
+	cd /home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,22 +148,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app/preinstall
+	cd /home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app/preinstall
+	cd /home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 app/CMakeFiles/shell-app.dir/rule:
-	cd /home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app/CMakeFiles/shell-app.dir/rule
+	cd /home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app/CMakeFiles/shell-app.dir/rule
 .PHONY : app/CMakeFiles/shell-app.dir/rule
 
 # Convenience name for target.
@@ -172,7 +172,7 @@ shell-app: app/CMakeFiles/shell-app.dir/rule
 
 # fast build rule for target.
 shell-app/fast:
-	cd /home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/build && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/shell-app.dir/build.make app/CMakeFiles/shell-app.dir/build
+	cd /home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/build && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/shell-app.dir/build.make app/CMakeFiles/shell-app.dir/build
 .PHONY : shell-app/fast
 
 human_object_detector.o: human_object_detector.cpp.o
@@ -180,7 +180,7 @@ human_object_detector.o: human_object_detector.cpp.o
 
 # target to build an object file
 human_object_detector.cpp.o:
-	cd /home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/build && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/shell-app.dir/build.make app/CMakeFiles/shell-app.dir/human_object_detector.cpp.o
+	cd /home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/build && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/shell-app.dir/build.make app/CMakeFiles/shell-app.dir/human_object_detector.cpp.o
 .PHONY : human_object_detector.cpp.o
 
 human_object_detector.i: human_object_detector.cpp.i
@@ -188,7 +188,7 @@ human_object_detector.i: human_object_detector.cpp.i
 
 # target to preprocess a source file
 human_object_detector.cpp.i:
-	cd /home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/build && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/shell-app.dir/build.make app/CMakeFiles/shell-app.dir/human_object_detector.cpp.i
+	cd /home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/build && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/shell-app.dir/build.make app/CMakeFiles/shell-app.dir/human_object_detector.cpp.i
 .PHONY : human_object_detector.cpp.i
 
 human_object_detector.s: human_object_detector.cpp.s
@@ -196,7 +196,7 @@ human_object_detector.s: human_object_detector.cpp.s
 
 # target to generate assembly for a file
 human_object_detector.cpp.s:
-	cd /home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/build && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/shell-app.dir/build.make app/CMakeFiles/shell-app.dir/human_object_detector.cpp.s
+	cd /home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/build && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/shell-app.dir/build.make app/CMakeFiles/shell-app.dir/human_object_detector.cpp.s
 .PHONY : human_object_detector.cpp.s
 
 main.o: main.cpp.o
@@ -204,7 +204,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	cd /home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/build && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/shell-app.dir/build.make app/CMakeFiles/shell-app.dir/main.cpp.o
+	cd /home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/build && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/shell-app.dir/build.make app/CMakeFiles/shell-app.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -212,7 +212,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	cd /home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/build && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/shell-app.dir/build.make app/CMakeFiles/shell-app.dir/main.cpp.i
+	cd /home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/build && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/shell-app.dir/build.make app/CMakeFiles/shell-app.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -220,7 +220,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	cd /home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/build && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/shell-app.dir/build.make app/CMakeFiles/shell-app.dir/main.cpp.s
+	cd /home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/build && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/shell-app.dir/build.make app/CMakeFiles/shell-app.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -253,6 +253,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

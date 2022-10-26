@@ -1,37 +1,37 @@
 [
 {
-  "directory": "/home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/build/app",
-  "command": "/usr/bin/c++  -I/home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/include -isystem /usr/local/include/opencv4 -Wall -Wextra -Wpedantic -g -std=gnu++14 -o CMakeFiles/shell-app.dir/main.cpp.o -c /home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/app/main.cpp",
-  "file": "/home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/app/main.cpp"
+  "directory": "/home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/build/app",
+  "command": "/usr/bin/c++  -I/home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/include -isystem /usr/local/include/opencv4 -g -O0 -fprofile-arcs -ftest-coverage -g -std=gnu++14 -o CMakeFiles/shell-app.dir/main.cpp.o -c /home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/app/main.cpp",
+  "file": "/home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/app/main.cpp"
 },
 {
-  "directory": "/home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/build/app",
-  "command": "/usr/bin/c++  -I/home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/include -isystem /usr/local/include/opencv4 -Wall -Wextra -Wpedantic -g -std=gnu++14 -o CMakeFiles/shell-app.dir/human_object_detector.cpp.o -c /home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/app/human_object_detector.cpp",
-  "file": "/home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/app/human_object_detector.cpp"
+  "directory": "/home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/build/app",
+  "command": "/usr/bin/c++  -I/home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/include -isystem /usr/local/include/opencv4 -g -O0 -fprofile-arcs -ftest-coverage -g -std=gnu++14 -o CMakeFiles/shell-app.dir/human_object_detector.cpp.o -c /home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/app/human_object_detector.cpp",
+  "file": "/home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/app/human_object_detector.cpp"
 },
 {
-  "directory": "/home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/build/test",
-  "command": "/usr/bin/c++  -I/home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/test/../vendor/googletest/googletest/include -I/home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/include -I/home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/vendor/googletest/googletest/include -isystem /usr/local/include/opencv4 -Wall -Wextra -Wpedantic -g -std=gnu++14 -o CMakeFiles/cpp-test.dir/main.cpp.o -c /home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/test/main.cpp",
-  "file": "/home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/test/main.cpp"
+  "directory": "/home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/build/test",
+  "command": "/usr/bin/c++  -I/home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/test/../vendor/googletest/googletest/include -I/home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/include -I/home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/vendor/googletest/googletest/include -isystem /usr/local/include/opencv4 -g -O0 -fprofile-arcs -ftest-coverage -g -std=gnu++14 -o CMakeFiles/cpp-test.dir/main.cpp.o -c /home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/test/main.cpp",
+  "file": "/home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/test/main.cpp"
 },
 {
-  "directory": "/home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/build/test",
-  "command": "/usr/bin/c++  -I/home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/test/../vendor/googletest/googletest/include -I/home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/include -I/home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/vendor/googletest/googletest/include -isystem /usr/local/include/opencv4 -Wall -Wextra -Wpedantic -g -std=gnu++14 -o CMakeFiles/cpp-test.dir/test.cpp.o -c /home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/test/test.cpp",
-  "file": "/home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/test/test.cpp"
+  "directory": "/home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/build/test",
+  "command": "/usr/bin/c++  -I/home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/test/../vendor/googletest/googletest/include -I/home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/include -I/home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/vendor/googletest/googletest/include -isystem /usr/local/include/opencv4 -g -O0 -fprofile-arcs -ftest-coverage -g -std=gnu++14 -o CMakeFiles/cpp-test.dir/test.cpp.o -c /home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/test/test.cpp",
+  "file": "/home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/test/test.cpp"
 },
 {
-  "directory": "/home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/build/test",
-  "command": "/usr/bin/c++  -I/home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/test/../vendor/googletest/googletest/include -I/home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/include -I/home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/vendor/googletest/googletest/include -isystem /usr/local/include/opencv4 -Wall -Wextra -Wpedantic -g -std=gnu++14 -o CMakeFiles/cpp-test.dir/human_object_detector_test.cpp.o -c /home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/test/human_object_detector_test.cpp",
-  "file": "/home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/test/human_object_detector_test.cpp"
+  "directory": "/home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/build/test",
+  "command": "/usr/bin/c++  -I/home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/test/../vendor/googletest/googletest/include -I/home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/include -I/home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/vendor/googletest/googletest/include -isystem /usr/local/include/opencv4 -g -O0 -fprofile-arcs -ftest-coverage -g -std=gnu++14 -o CMakeFiles/cpp-test.dir/human_object_detector_test.cpp.o -c /home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/test/human_object_detector_test.cpp",
+  "file": "/home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/test/human_object_detector_test.cpp"
 },
 {
-  "directory": "/home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/build/vendor/googletest/googletest",
-  "command": "/usr/bin/c++  -I/home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/vendor/googletest/googletest/include -I/home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/vendor/googletest/googletest -Wall -Wextra -Wpedantic -g -Wall -Wextra -Wpedantic -g -Wall -Wshadow -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -std=gnu++14 -o CMakeFiles/gtest.dir/src/gtest-all.cc.o -c /home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/vendor/googletest/googletest/src/gtest-all.cc",
-  "file": "/home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/vendor/googletest/googletest/src/gtest-all.cc"
+  "directory": "/home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/build/vendor/googletest/googletest",
+  "command": "/usr/bin/c++  -I/home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/vendor/googletest/googletest/include -I/home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/vendor/googletest/googletest -g -O0 -fprofile-arcs -ftest-coverage -g -g -O0 -fprofile-arcs -ftest-coverage -Wall -Wshadow -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -std=gnu++14 -o CMakeFiles/gtest.dir/src/gtest-all.cc.o -c /home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/vendor/googletest/googletest/src/gtest-all.cc",
+  "file": "/home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/vendor/googletest/googletest/src/gtest-all.cc"
 },
 {
-  "directory": "/home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/build/vendor/googletest/googletest",
-  "command": "/usr/bin/c++  -I/home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/vendor/googletest/googletest/include -I/home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/vendor/googletest/googletest -Wall -Wextra -Wpedantic -g -Wall -Wextra -Wpedantic -g -Wall -Wshadow -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -std=gnu++14 -o CMakeFiles/gtest_main.dir/src/gtest_main.cc.o -c /home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/vendor/googletest/googletest/src/gtest_main.cc",
-  "file": "/home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/vendor/googletest/googletest/src/gtest_main.cc"
+  "directory": "/home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/build/vendor/googletest/googletest",
+  "command": "/usr/bin/c++  -I/home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/vendor/googletest/googletest/include -I/home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/vendor/googletest/googletest -g -O0 -fprofile-arcs -ftest-coverage -g -g -O0 -fprofile-arcs -ftest-coverage -Wall -Wshadow -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -std=gnu++14 -o CMakeFiles/gtest_main.dir/src/gtest_main.cc.o -c /home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/vendor/googletest/googletest/src/gtest_main.cc",
+  "file": "/home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/vendor/googletest/googletest/src/gtest_main.cc"
 }
 ]

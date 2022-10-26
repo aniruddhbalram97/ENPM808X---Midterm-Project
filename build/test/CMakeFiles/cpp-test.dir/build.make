@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project
+CMAKE_SOURCE_DIR = /home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/build
+CMAKE_BINARY_DIR = /home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/build
 
 # Include any dependencies generated for this target.
 include test/CMakeFiles/cpp-test.dir/depend.make
@@ -72,44 +72,44 @@ include test/CMakeFiles/cpp-test.dir/flags.make
 test/CMakeFiles/cpp-test.dir/main.cpp.o: test/CMakeFiles/cpp-test.dir/flags.make
 test/CMakeFiles/cpp-test.dir/main.cpp.o: ../test/main.cpp
 test/CMakeFiles/cpp-test.dir/main.cpp.o: test/CMakeFiles/cpp-test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object test/CMakeFiles/cpp-test.dir/main.cpp.o"
-	cd /home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT test/CMakeFiles/cpp-test.dir/main.cpp.o -MF CMakeFiles/cpp-test.dir/main.cpp.o.d -o CMakeFiles/cpp-test.dir/main.cpp.o -c /home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/test/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object test/CMakeFiles/cpp-test.dir/main.cpp.o"
+	cd /home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT test/CMakeFiles/cpp-test.dir/main.cpp.o -MF CMakeFiles/cpp-test.dir/main.cpp.o.d -o CMakeFiles/cpp-test.dir/main.cpp.o -c /home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/test/main.cpp
 
 test/CMakeFiles/cpp-test.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cpp-test.dir/main.cpp.i"
-	cd /home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/test/main.cpp > CMakeFiles/cpp-test.dir/main.cpp.i
+	cd /home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/test/main.cpp > CMakeFiles/cpp-test.dir/main.cpp.i
 
 test/CMakeFiles/cpp-test.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cpp-test.dir/main.cpp.s"
-	cd /home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/test/main.cpp -o CMakeFiles/cpp-test.dir/main.cpp.s
+	cd /home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/test/main.cpp -o CMakeFiles/cpp-test.dir/main.cpp.s
 
 test/CMakeFiles/cpp-test.dir/test.cpp.o: test/CMakeFiles/cpp-test.dir/flags.make
 test/CMakeFiles/cpp-test.dir/test.cpp.o: ../test/test.cpp
 test/CMakeFiles/cpp-test.dir/test.cpp.o: test/CMakeFiles/cpp-test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object test/CMakeFiles/cpp-test.dir/test.cpp.o"
-	cd /home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT test/CMakeFiles/cpp-test.dir/test.cpp.o -MF CMakeFiles/cpp-test.dir/test.cpp.o.d -o CMakeFiles/cpp-test.dir/test.cpp.o -c /home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/test/test.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object test/CMakeFiles/cpp-test.dir/test.cpp.o"
+	cd /home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT test/CMakeFiles/cpp-test.dir/test.cpp.o -MF CMakeFiles/cpp-test.dir/test.cpp.o.d -o CMakeFiles/cpp-test.dir/test.cpp.o -c /home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/test/test.cpp
 
 test/CMakeFiles/cpp-test.dir/test.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cpp-test.dir/test.cpp.i"
-	cd /home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/test/test.cpp > CMakeFiles/cpp-test.dir/test.cpp.i
+	cd /home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/test/test.cpp > CMakeFiles/cpp-test.dir/test.cpp.i
 
 test/CMakeFiles/cpp-test.dir/test.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cpp-test.dir/test.cpp.s"
-	cd /home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/test/test.cpp -o CMakeFiles/cpp-test.dir/test.cpp.s
+	cd /home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/test/test.cpp -o CMakeFiles/cpp-test.dir/test.cpp.s
 
 test/CMakeFiles/cpp-test.dir/human_object_detector_test.cpp.o: test/CMakeFiles/cpp-test.dir/flags.make
 test/CMakeFiles/cpp-test.dir/human_object_detector_test.cpp.o: ../test/human_object_detector_test.cpp
 test/CMakeFiles/cpp-test.dir/human_object_detector_test.cpp.o: test/CMakeFiles/cpp-test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object test/CMakeFiles/cpp-test.dir/human_object_detector_test.cpp.o"
-	cd /home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT test/CMakeFiles/cpp-test.dir/human_object_detector_test.cpp.o -MF CMakeFiles/cpp-test.dir/human_object_detector_test.cpp.o.d -o CMakeFiles/cpp-test.dir/human_object_detector_test.cpp.o -c /home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/test/human_object_detector_test.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object test/CMakeFiles/cpp-test.dir/human_object_detector_test.cpp.o"
+	cd /home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT test/CMakeFiles/cpp-test.dir/human_object_detector_test.cpp.o -MF CMakeFiles/cpp-test.dir/human_object_detector_test.cpp.o.d -o CMakeFiles/cpp-test.dir/human_object_detector_test.cpp.o -c /home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/test/human_object_detector_test.cpp
 
 test/CMakeFiles/cpp-test.dir/human_object_detector_test.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cpp-test.dir/human_object_detector_test.cpp.i"
-	cd /home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/test/human_object_detector_test.cpp > CMakeFiles/cpp-test.dir/human_object_detector_test.cpp.i
+	cd /home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/test/human_object_detector_test.cpp > CMakeFiles/cpp-test.dir/human_object_detector_test.cpp.i
 
 test/CMakeFiles/cpp-test.dir/human_object_detector_test.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cpp-test.dir/human_object_detector_test.cpp.s"
-	cd /home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/test/human_object_detector_test.cpp -o CMakeFiles/cpp-test.dir/human_object_detector_test.cpp.s
+	cd /home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/test/human_object_detector_test.cpp -o CMakeFiles/cpp-test.dir/human_object_detector_test.cpp.s
 
 # Object files for target cpp-test
 cpp__test_OBJECTS = \
@@ -178,18 +178,18 @@ test/cpp-test: /usr/local/lib/libopencv_photo.so.4.5.1
 test/cpp-test: /usr/local/lib/libopencv_imgproc.so.4.5.1
 test/cpp-test: /usr/local/lib/libopencv_core.so.4.5.1
 test/cpp-test: test/CMakeFiles/cpp-test.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable cpp-test"
-	cd /home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/build/test && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/cpp-test.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable cpp-test"
+	cd /home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/build/test && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/cpp-test.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 test/CMakeFiles/cpp-test.dir/build: test/cpp-test
 .PHONY : test/CMakeFiles/cpp-test.dir/build
 
 test/CMakeFiles/cpp-test.dir/clean:
-	cd /home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/build/test && $(CMAKE_COMMAND) -P CMakeFiles/cpp-test.dir/cmake_clean.cmake
+	cd /home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/build/test && $(CMAKE_COMMAND) -P CMakeFiles/cpp-test.dir/cmake_clean.cmake
 .PHONY : test/CMakeFiles/cpp-test.dir/clean
 
 test/CMakeFiles/cpp-test.dir/depend:
-	cd /home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project /home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/test /home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/build /home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/build/test /home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/build/test/CMakeFiles/cpp-test.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project /home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/test /home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/build /home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/build/test /home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/build/test/CMakeFiles/cpp-test.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : test/CMakeFiles/cpp-test.dir/depend
 

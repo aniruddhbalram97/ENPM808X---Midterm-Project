@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project
+CMAKE_SOURCE_DIR = /home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/build
+CMAKE_BINARY_DIR = /home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,9 +132,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/build/CMakeFiles /home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/build/CMakeFiles /home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -160,6 +160,19 @@ preinstall/fast:
 depend:
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
+
+#=============================================================================
+# Target rules for targets named code_coverage
+
+# Build rule for target.
+code_coverage: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 code_coverage
+.PHONY : code_coverage
+
+# fast build rule for target.
+code_coverage/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/code_coverage.dir/build.make CMakeFiles/code_coverage.dir/build
+.PHONY : code_coverage/fast
 
 #=============================================================================
 # Target rules for targets named shell-app
@@ -225,6 +238,7 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... code_coverage"
 	@echo "... cpp-test"
 	@echo "... gtest"
 	@echo "... gtest_main"

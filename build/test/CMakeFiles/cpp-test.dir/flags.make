@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/test/../vendor/googletest/googletest/include -I/home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/include -I/home/linux/Midterm/Joshua/Phase1/ENPM808X---Midterm-Project/vendor/googletest/googletest/include -isystem /usr/local/include/opencv4
+CXX_INCLUDES = -I/home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/test/../vendor/googletest/googletest/include -I/home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/include -I/home/linux/Midterm/Joshua/Phase2/ENPM808X---Midterm-Project/vendor/googletest/googletest/include -isystem /usr/local/include/opencv4
 
-CXX_FLAGS = -Wall -Wextra -Wpedantic -g -std=gnu++14
+CXX_FLAGS = -g -O0 -fprofile-arcs -ftest-coverage -g -std=gnu++14
 
