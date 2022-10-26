@@ -16,7 +16,10 @@
 #include <opencv2/opencv.hpp>
 #include <object_detection.hpp>
 
+
+
 int main() {
+
 std::vector<std::string> class_list;
 std::ifstream ifs;
 std::string line;
@@ -41,9 +44,17 @@ Blob.generateBlobFromImage(image_in);
 cv::Mat blob = Blob.getBlob();
 // loading the model
 cv::dnn::Net yolo_model;
+
+std::cout<<"!!!!!Test:1!!!!!"<<std::endl;
+
 yolo_model = cv::dnn::readNet("./../app/models/YOLOv5s.onnx");
+std::cout<<"!!!!!Test:1.1!!!!!"<<std::endl;
 std::vector<cv::Mat> preprocessed_data;
+std::cout<<"!!!!!Test:1.2!!!!!"<<std::endl;
 preprocessed_data = HOD.preProcessAlgorithm(blob, yolo_model);
+
+std::cout<<"!!!!!Test:2!!!!!"<<std::endl;//Error after preprocessed_data 
+
 std::vector<cv::Rect> bounding_boxes =
 HOD.postProcessAlgorithm(preprocessed_data,
 image_in, class_list);
