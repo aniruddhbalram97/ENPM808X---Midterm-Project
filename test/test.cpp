@@ -27,21 +27,14 @@ TEST(Human_Object_Detector, Check_Preprocessed_Data_Output) {
 BlobGenerator Blob;
 HumanObjectDetector HOD;
 cv::Mat image_in = cv::imread("./../app/traffic.jpg");
-
 Blob.generateBlobFromImage(image_in);
 cv::Mat blob = Blob.getBlob();
-
 EXPECT_EQ(660, image_in.size().height);
-
 cv::dnn::Net yolo_model;
-
 yolo_model = cv::dnn::readNet("./../app/models/YOLOv5s.onnx");
-/*
 std::vector<cv::Mat> preprocessed_data;
-
 preprocessed_data = HOD.preProcessAlgorithm(blob, yolo_model);
 EXPECT_EQ(25200, preprocessed_data[0].size[1]);
 EXPECT_EQ(85, preprocessed_data[0].size[2]);
-*/
 }
 
