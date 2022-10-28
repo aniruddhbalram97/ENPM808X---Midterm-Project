@@ -10,10 +10,41 @@
  */
 #pragma once
 
+#include <iostream>
+#include <string>
 #include <fstream>
 #include <vector>
-#include <string>
+#include <chrono>
+#include <ctime>
+#include <opencv2/highgui.hpp>
+#include <opencv2/videoio.hpp>
 #include <opencv2/opencv.hpp>
+#include <object_detection.hpp>
+
+
+
+/**
+ * @brief Class used to contain the functions required to use the webcam, and detect a person    
+ * 
+ */
+
+class CameraModule{
+ private:
+       cv::Mat cm_image_in;
+       cv::Mat cm_img;
+ public:
+       /**
+        * @brief function that displays webcam's image and creates a bounding box around a person
+        * 
+        * @param cm_yolo_model -contains path to YOLOv5s.onnx, which contain YOLOv5s models
+        * @param cm_file_name -contains path to coco.names, which contain object titles  
+        * @param cm_class_list -contains list of objects titles 
+        */
+       void generateImage(cv::dnn::Net cm_yolo_model,
+       std::string cm_file_name, std::vector<std::string> cm_class_list);
+};
+
+
 
 /**
  * @brief Used to generata blobes and get their dimensions
@@ -95,5 +126,18 @@ class HumanObjectDetector: public BlobGenerator {
         cv::Mat applyNMSAndAppendRectanglesToImage(cv::Mat &image_in,
         std::vector<cv::Rect> &bounding_boxes,
         const std::vector<std::string> &name_of_class);
+        /**
+         * @brief Combined post and pre-processing methods  
+         * 
+         * @param image_in -input image from webcam
+         * @param yolo_model-contains path to YOLOv5s.onnx, which contain YOLOv5s models 
+         * @param class_list -contains list of objects titles 
+         * @param file_name -contains path to coco.names, which contain object titles  
+         * @return cv::Mat 
+         */
+        cv::Mat objectDetectorModel(cv::Mat image_in, cv::dnn::Net &yolo_model,
+       std::vector<std::string> &class_list,
+       std::string &file_name);
 };
+
 

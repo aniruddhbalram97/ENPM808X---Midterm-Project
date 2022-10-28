@@ -13,15 +13,19 @@
 #include <string>
 #include <fstream>
 #include <vector>
+#include <chrono>
+#include <ctime>
+#include <opencv2/highgui.hpp>
+#include <opencv2/videoio.hpp>
 #include <opencv2/opencv.hpp>
 #include <object_detection.hpp>
+
+
 
 int main() {
 std::vector<std::string> class_list;
 std::ifstream ifs;
 std::string line;
-BlobGenerator Blob;
-HumanObjectDetector HOD;
 std::string file_name = "./../app/coco.names";
 ifs.open(file_name.c_str());
 if(ifs.is_open()) {
@@ -34,23 +38,53 @@ if(ifs.is_open()) {
     exit(1);
 }
 ifs.close();
-cv::Mat image_in;
-image_in = cv::imread("./../app/traffic.jpg");
-// generate blob from image
-Blob.generateBlobFromImage(image_in);
-cv::Mat blob = Blob.getBlob();
-// loading the model
 cv::dnn::Net yolo_model;
 yolo_model = cv::dnn::readNet("./../app/models/YOLOv5s.onnx");
-std::vector<cv::Mat> preprocessed_data;
-preprocessed_data = HOD.preProcessAlgorithm(blob, yolo_model);
-std::vector<cv::Rect> bounding_boxes =
-HOD.postProcessAlgorithm(preprocessed_data,
-image_in, class_list);
-cv::Mat img = HOD.applyNMSAndAppendRectanglesToImage(image_in,
-bounding_boxes, class_list);
-cv::imshow("output", img);
-cv::waitKey(0);
+
+/*
+// !!!!!!!!!!!!!!
+cv::Mat image_in;
+cv::namedWindow("Object Detection");
+
+cv::VideoCapture cap(0);
+if(!cap.isOpened()) {
+   std::cout << "Cannot Open Camera";
+}
+*/
+
+// !!!!!!!!
+// cv::Mat img;
+
+CameraModule Camera;
+
+Camera.generateImage(yolo_model, file_name,  class_list);
+
+// !!!!!!!!!!
+/*
+while (true) {
+    auto start = std::chrono::system_clock::now();
+    cap >> image_in;
+
+    img = HOD.objectDetectorModel(image_in,yolo_model,
+    class_list,file_name);
+    
+    cv::imshow("Object Detection", img);
+    
+    auto end = std::chrono::system_clock::now();
+    
+    std::chrono::duration<double> elapsed_seconds = end-start;
+    
+    std::cout<<"elapsed time: " << elapsed_seconds.count()<<std::endl;
+    
+    cv::waitKey(25);
+}
+*/
+
+
+// image_in = cv::imread("./../app/traffic.jpg");
+// cv::Mat img = HOD.objectDetectorModel(image_in);
+// cv::imshow("output", img);
+// cv::waitKey(0);
 return 0;
 }
 
