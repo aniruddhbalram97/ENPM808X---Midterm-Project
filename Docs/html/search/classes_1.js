@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['humanobjectdetector_25',['HumanObjectDetector',['../classHumanObjectDetector.html',1,'']]]
+  ['camera_26',['Camera',['../classCamera.html',1,'']]]
 ];

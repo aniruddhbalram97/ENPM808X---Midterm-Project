@@ -13,8 +13,8 @@
 #include <fstream>
 #include <opencv2/opencv.hpp>
 
-#ifndef CODE_INCLUDE_CONSTANTS_HPP_
-#define CODE_INCLUDE_CONSTANTS_HPP_
+#ifndef INCLUDE_CONSTANTS_HPP_
+#define INCLUDE_CONSTANTS_HPP_
 /**
  * @brief Provides constant values  for blob size, image size, filter thresholds, interface colours and font properties 
  * 
@@ -33,8 +33,8 @@ namespace ODConstants {
     cv::Scalar B = cv::Scalar(0, 0, 255);  /// blue-color
     cv::Scalar BLACK = cv::Scalar(0, 0, 0);  /// black-color
     cv::Scalar WHITE = cv::Scalar(255, 255, 255);  /// white-color
-    const double F_SCALE = 1;  /// font-scale
-    const int F_STYLE = cv::FONT_HERSHEY_COMPLEX;  /// font-style
-    const int F_THICKNESS = 2;  /// font-thickness
+    const double F_SCALE = 0.5;  /// font-scale
+    const int F_STYLE = cv::FONT_HERSHEY_SIMPLEX;  /// font-style
+    const double F_THICKNESS = 0.2;  /// font-thickness
 }  // namespace ODConstants
-#endif  // CODE_INCLUDE_CONSTANTS_HPP_
+#endif  // INCLUDE_CONSTANTS_HPP_

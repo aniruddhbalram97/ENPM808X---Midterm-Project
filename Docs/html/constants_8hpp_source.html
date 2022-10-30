@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>HUMAN OBJECT DETECTOR AND TRACKER: include/constants.hpp Source File</title>
+<title>Human Object Detector: include/constants.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,9 +21,8 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">HUMAN OBJECT DETECTOR AND TRACKER
+   <div id="projectname">Human Object Detector
    </div>
-   <div id="projectbrief">A C++ based application to detect and track humans</div>
   </td>
  </tr>
  </tbody>
@@ -75,8 +74,8 @@ $(function() {
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;fstream&gt;</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;opencv2/opencv.hpp&gt;</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#ifndef CODE_INCLUDE_CONSTANTS_HPP_</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#define CODE_INCLUDE_CONSTANTS_HPP_</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#ifndef INCLUDE_CONSTANTS_HPP_</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#define INCLUDE_CONSTANTS_HPP_</span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
 <div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="namespaceODConstants.html">   22</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceODConstants.html">ODConstants</a> {</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">double</span> WIDTH_OF_INPUT = 640.0;  </div>
@@ -89,14 +88,14 @@ $(function() {
 <div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="namespaceODConstants.html#a233f0393c461c8ddf203d39e1b78d0ce">   33</a></span>&#160;    cv::Scalar <a class="code" href="namespaceODConstants.html#a233f0393c461c8ddf203d39e1b78d0ce">B</a> = cv::Scalar(0, 0, 255);  </div>
 <div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="namespaceODConstants.html#a941466d707d98c6d1abb2b6c31662911">   34</a></span>&#160;    cv::Scalar <a class="code" href="namespaceODConstants.html#a941466d707d98c6d1abb2b6c31662911">BLACK</a> = cv::Scalar(0, 0, 0);  </div>
 <div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="namespaceODConstants.html#a513a8d81b6ef05db8885a02a6a709fef">   35</a></span>&#160;    cv::Scalar <a class="code" href="namespaceODConstants.html#a513a8d81b6ef05db8885a02a6a709fef">WHITE</a> = cv::Scalar(255, 255, 255);  </div>
-<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="namespaceODConstants.html#a362be38d1e0ce230793a5004daff5ef4">   36</a></span>&#160;    <span class="keyword">const</span> <span class="keywordtype">double</span> <a class="code" href="namespaceODConstants.html#a362be38d1e0ce230793a5004daff5ef4">F_SCALE</a> = 1;  </div>
-<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="namespaceODConstants.html#a6af4c31b3681e8a96cbb3ac94b46a187">   37</a></span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="namespaceODConstants.html#a6af4c31b3681e8a96cbb3ac94b46a187">F_STYLE</a> = cv::FONT_HERSHEY_COMPLEX;  </div>
-<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="namespaceODConstants.html#ae7ff56682427faeae1a3eb1f3e6674e9">   38</a></span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="namespaceODConstants.html#ae7ff56682427faeae1a3eb1f3e6674e9">F_THICKNESS</a> = 2;  </div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="namespaceODConstants.html#a362be38d1e0ce230793a5004daff5ef4">   36</a></span>&#160;    <span class="keyword">const</span> <span class="keywordtype">double</span> <a class="code" href="namespaceODConstants.html#a362be38d1e0ce230793a5004daff5ef4">F_SCALE</a> = 0.5;  </div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="namespaceODConstants.html#a6af4c31b3681e8a96cbb3ac94b46a187">   37</a></span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="namespaceODConstants.html#a6af4c31b3681e8a96cbb3ac94b46a187">F_STYLE</a> = cv::FONT_HERSHEY_SIMPLEX;  </div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="namespaceODConstants.html#acf77d2c721d5502e291d9fcdda7357bf">   38</a></span>&#160;    <span class="keyword">const</span> <span class="keywordtype">double</span> <a class="code" href="namespaceODConstants.html#acf77d2c721d5502e291d9fcdda7357bf">F_THICKNESS</a> = 0.2;  </div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;}  <span class="comment">// namespace ODConstants</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#endif  // CODE_INCLUDE_CONSTANTS_HPP_</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#endif  // INCLUDE_CONSTANTS_HPP_</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="anamespaceODConstants_html_ae7ff56682427faeae1a3eb1f3e6674e9"><div class="ttname"><a href="namespaceODConstants.html#ae7ff56682427faeae1a3eb1f3e6674e9">ODConstants::F_THICKNESS</a></div><div class="ttdeci">const int F_THICKNESS</div><div class="ttdoc">font-style</div><div class="ttdef"><b>Definition:</b> constants.hpp:38</div></div>
 <div class="ttc" id="anamespaceODConstants_html_a233f0393c461c8ddf203d39e1b78d0ce"><div class="ttname"><a href="namespaceODConstants.html#a233f0393c461c8ddf203d39e1b78d0ce">ODConstants::B</a></div><div class="ttdeci">cv::Scalar B</div><div class="ttdoc">green-color</div><div class="ttdef"><b>Definition:</b> constants.hpp:33</div></div>
+<div class="ttc" id="anamespaceODConstants_html_acf77d2c721d5502e291d9fcdda7357bf"><div class="ttname"><a href="namespaceODConstants.html#acf77d2c721d5502e291d9fcdda7357bf">ODConstants::F_THICKNESS</a></div><div class="ttdeci">const double F_THICKNESS</div><div class="ttdoc">font-style</div><div class="ttdef"><b>Definition:</b> constants.hpp:38</div></div>
 <div class="ttc" id="anamespaceODConstants_html_a513a8d81b6ef05db8885a02a6a709fef"><div class="ttname"><a href="namespaceODConstants.html#a513a8d81b6ef05db8885a02a6a709fef">ODConstants::WHITE</a></div><div class="ttdeci">cv::Scalar WHITE</div><div class="ttdoc">black-color</div><div class="ttdef"><b>Definition:</b> constants.hpp:35</div></div>
 <div class="ttc" id="anamespaceODConstants_html_ad05de5c46210406da96eb6267a53ccd4"><div class="ttname"><a href="namespaceODConstants.html#ad05de5c46210406da96eb6267a53ccd4">ODConstants::HEIGHT_OF_INPUT</a></div><div class="ttdeci">const double HEIGHT_OF_INPUT</div><div class="ttdoc">width of input image</div><div class="ttdef"><b>Definition:</b> constants.hpp:24</div></div>
 <div class="ttc" id="anamespaceODConstants_html"><div class="ttname"><a href="namespaceODConstants.html">ODConstants</a></div><div class="ttdoc">Provides constant values for blob size, image size, filter thresholds, interface colours and font pro...</div><div class="ttdef"><b>Definition:</b> constants.hpp:22</div></div>
