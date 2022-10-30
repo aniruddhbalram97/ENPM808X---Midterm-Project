@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>HUMAN OBJECT DETECTOR AND TRACKER: Member List</title>
+<title>Human Object Detector: Member List</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,9 +21,8 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">HUMAN OBJECT DETECTOR AND TRACKER
+   <div id="projectname">Human Object Detector
    </div>
-   <div id="projectbrief">A C++ based application to detect and track humans</div>
   </td>
  </tr>
  </tbody>
@@ -69,12 +68,15 @@ $(function() {
 
 <p>This is the complete list of members for <a class="el" href="classHumanObjectDetector.html">HumanObjectDetector</a>, including all inherited members.</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="classHumanObjectDetector.html#a22df9f13709921209a6801b992519599">applyNMSAndAppendRectanglesToImage</a>(cv::Mat &amp;image_in, std::vector&lt; cv::Rect &gt; &amp;bounding_boxes, const std::vector&lt; std::string &gt; &amp;name_of_class)</td><td class="entry"><a class="el" href="classHumanObjectDetector.html">HumanObjectDetector</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classBlobGenerator.html#a70d9c7243527755a3200d929aabfcef9">generateBlobFromImage</a>(cv::Mat &amp;image_in)</td><td class="entry"><a class="el" href="classBlobGenerator.html">BlobGenerator</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classHumanObjectDetector.html#a783e3aff8f390a1c96c37f0ca7889550">applyNMSAndAppendRectanglesToImage</a>(const cv::Mat &amp;image_in, const std::vector&lt; cv::Rect &gt; &amp;bounding_boxes, const std::vector&lt; std::string &gt; &amp;name_of_class)</td><td class="entry"><a class="el" href="classHumanObjectDetector.html">HumanObjectDetector</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classBlobGenerator.html#ade36e6dc0e71715c4fc35ccb1c22ca5f">generateBlobFromImage</a>(const cv::Mat &amp;image_in)</td><td class="entry"><a class="el" href="classBlobGenerator.html">BlobGenerator</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classBlobGenerator.html#a66597a7f0c12237aa4f58f5fef4fed8a">getBlob</a>()</td><td class="entry"><a class="el" href="classBlobGenerator.html">BlobGenerator</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classHumanObjectDetector.html#aea6064b62bd530a7e964d0c57fb02976">labelBox</a>(cv::Mat &amp;image_in, std::string label_value, int posTop, int posLeft)</td><td class="entry"><a class="el" href="classHumanObjectDetector.html">HumanObjectDetector</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classHumanObjectDetector.html#a188a34269e4882506e11f6de0215ca01">postProcessAlgorithm</a>(std::vector&lt; cv::Mat &gt; &amp;preprocessed_data, cv::Mat &amp;image_in, const std::vector&lt; std::string &gt; &amp;name_of_class)</td><td class="entry"><a class="el" href="classHumanObjectDetector.html">HumanObjectDetector</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classHumanObjectDetector.html#aa23478b014293a6625ad71d2360e2bfd">preProcessAlgorithm</a>(cv::Mat blob, cv::dnn::Net &amp;net)</td><td class="entry"><a class="el" href="classHumanObjectDetector.html">HumanObjectDetector</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>getNMSID</b>() (defined in <a class="el" href="classHumanObjectDetector.html">HumanObjectDetector</a>)</td><td class="entry"><a class="el" href="classHumanObjectDetector.html">HumanObjectDetector</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classHumanObjectDetector.html#ac3b7cf709fdd38bbb6748e28081a885f">labelBox</a>(const cv::Mat &amp;image_in, std::string label_value, int posTop, int posLeft)</td><td class="entry"><a class="el" href="classHumanObjectDetector.html">HumanObjectDetector</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>objectDetectorModel</b>(cv::Mat image_in, cv::dnn::Net yolo_model, const std::vector&lt; std::string &gt; &amp;class_list) (defined in <a class="el" href="classHumanObjectDetector.html">HumanObjectDetector</a>)</td><td class="entry"><a class="el" href="classHumanObjectDetector.html">HumanObjectDetector</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classHumanObjectDetector.html#aad1bab7f21bc00e2d1f4a432fba6513c">postProcessAlgorithm</a>(const std::vector&lt; cv::Mat &gt; &amp;preprocessed_data, const cv::Mat &amp;image_in, const std::vector&lt; std::string &gt; &amp;name_of_class)</td><td class="entry"><a class="el" href="classHumanObjectDetector.html">HumanObjectDetector</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classHumanObjectDetector.html#a6d79bb2b3509df2dd2070ebe48d8a598">preProcessAlgorithm</a>(cv::Mat blob, cv::dnn::Net net)</td><td class="entry"><a class="el" href="classHumanObjectDetector.html">HumanObjectDetector</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>robotCoordinateConversion</b>(const cv::Rect &amp;bbox, int human_id) (defined in <a class="el" href="classHumanObjectDetector.html">HumanObjectDetector</a>)</td><td class="entry"><a class="el" href="classHumanObjectDetector.html">HumanObjectDetector</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

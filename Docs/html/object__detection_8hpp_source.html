@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>HUMAN OBJECT DETECTOR AND TRACKER: include/object_detection.hpp Source File</title>
+<title>Human Object Detector: include/object_detection.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,9 +21,8 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">HUMAN OBJECT DETECTOR AND TRACKER
+   <div id="projectname">Human Object Detector
    </div>
-   <div id="projectbrief">A C++ based application to detect and track humans</div>
   </td>
  </tr>
  </tbody>
@@ -82,7 +81,7 @@ $(function() {
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; <span class="keyword">private</span>:</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        cv::Mat blob;</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classBlobGenerator.html#a70d9c7243527755a3200d929aabfcef9">generateBlobFromImage</a>(cv::Mat &amp;image_in);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classBlobGenerator.html#ade36e6dc0e71715c4fc35ccb1c22ca5f">generateBlobFromImage</a>(<span class="keyword">const</span> cv::Mat &amp;image_in);</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        cv::Mat <a class="code" href="classBlobGenerator.html#a66597a7f0c12237aa4f58f5fef4fed8a">getBlob</a>();</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;};</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
@@ -93,30 +92,59 @@ $(function() {
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        std::vector&lt;cv::Rect&gt; bounding_boxes;</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        cv::dnn::Net net;</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        std::vector&lt;cv::Mat&gt; detections;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classHumanObjectDetector.html#aea6064b62bd530a7e964d0c57fb02976">labelBox</a>(cv::Mat&amp; image_in,</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        std::string label_value, <span class="keywordtype">int</span> posTop, <span class="keywordtype">int</span> posLeft);</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        std::vector&lt;cv::Mat&gt; <a class="code" href="classHumanObjectDetector.html#aa23478b014293a6625ad71d2360e2bfd">preProcessAlgorithm</a>(</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        cv::Mat blob, cv::dnn::Net &amp;net);</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        std::vector&lt;cv::Rect&gt; <a class="code" href="classHumanObjectDetector.html#a188a34269e4882506e11f6de0215ca01">postProcessAlgorithm</a>(</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        std::vector&lt;cv::Mat&gt;&amp; preprocessed_data,</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        cv::Mat&amp; image_in,</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keyword">const</span> std::vector&lt;std::string&gt;&amp; name_of_class);</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        cv::Mat <a class="code" href="classHumanObjectDetector.html#a22df9f13709921209a6801b992519599">applyNMSAndAppendRectanglesToImage</a>(cv::Mat &amp;image_in,</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        std::vector&lt;cv::Rect&gt; &amp;bounding_boxes,</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <span class="keyword">const</span> std::vector&lt;std::string&gt; &amp;name_of_class);</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;};</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        std::vector&lt;int&gt; id_nms;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span> avg_height_of_person = 170.018;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span> focal_length = 1053;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classHumanObjectDetector.html#ac3b7cf709fdd38bbb6748e28081a885f">labelBox</a>(<span class="keyword">const</span> cv::Mat &amp;image_in, std::string label_value,</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keywordtype">int</span> posTop, <span class="keywordtype">int</span> posLeft);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        std::vector&lt;cv::Mat&gt; <a class="code" href="classHumanObjectDetector.html#a6d79bb2b3509df2dd2070ebe48d8a598">preProcessAlgorithm</a>(</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        cv::Mat blob, cv::dnn::Net net);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        std::vector&lt;cv::Rect&gt; <a class="code" href="classHumanObjectDetector.html#aad1bab7f21bc00e2d1f4a432fba6513c">postProcessAlgorithm</a>(</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="keyword">const</span> std::vector&lt;cv::Mat&gt;&amp; preprocessed_data,</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keyword">const</span> cv::Mat&amp; image_in,</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="keyword">const</span> std::vector&lt;std::string&gt;&amp; name_of_class);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        cv::Mat <a class="code" href="classHumanObjectDetector.html#a783e3aff8f390a1c96c37f0ca7889550">applyNMSAndAppendRectanglesToImage</a>(</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <span class="keyword">const</span> cv::Mat &amp;image_in,</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <span class="keyword">const</span> std::vector&lt;cv::Rect&gt; &amp;bounding_boxes,</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <span class="keyword">const</span> std::vector&lt;std::string&gt; &amp;name_of_class);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <span class="keywordtype">void</span> robotCoordinateConversion(<span class="keyword">const</span> cv::Rect &amp;bbox, <span class="keywordtype">int</span> human_id);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        cv::Mat objectDetectorModel(cv::Mat image_in,</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        cv::dnn::Net yolo_model,</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <span class="keyword">const</span> std::vector&lt;std::string&gt; &amp;class_list);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        std::vector&lt;int&gt; getNMSID() {</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;              <span class="keywordflow">return</span> id_nms;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        }</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;};</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
+<div class="line"><a name="l00114"></a><span class="lineno"><a class="line" href="classCamera.html">  114</a></span>&#160;<span class="keyword">class </span><a class="code" href="classCamera.html">Camera</a>: <span class="keyword">public</span> <a class="code" href="classHumanObjectDetector.html">HumanObjectDetector</a> {</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        std::vector&lt;std::string&gt; class_list;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        <a class="code" href="classHumanObjectDetector.html">HumanObjectDetector</a> HOD;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        std::ifstream ifs;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        std::string line;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        std::string file_name = <span class="stringliteral">&quot;./../app/coco.names&quot;</span>;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        cv::dnn::Net yolo_model =</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        cv::dnn::readNet(<span class="stringliteral">&quot;./../app/models/YOLOv5s.onnx&quot;</span>);</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        cv::Mat image_in;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        cv::Mat img;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        <span class="keywordtype">void</span> runLiveDetector(<span class="keywordtype">bool</span> live, <span class="keywordtype">bool</span> test);</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        cv::Mat getImageInput();</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;};</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; </div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclassBlobGenerator_html"><div class="ttname"><a href="classBlobGenerator.html">BlobGenerator</a></div><div class="ttdoc">Used to generata blobes and get their dimensions.</div><div class="ttdef"><b>Definition:</b> object_detection.hpp:22</div></div>
-<div class="ttc" id="aclassHumanObjectDetector_html_a22df9f13709921209a6801b992519599"><div class="ttname"><a href="classHumanObjectDetector.html#a22df9f13709921209a6801b992519599">HumanObjectDetector::applyNMSAndAppendRectanglesToImage</a></div><div class="ttdeci">cv::Mat applyNMSAndAppendRectanglesToImage(cv::Mat &amp;image_in, std::vector&lt; cv::Rect &gt; &amp;bounding_boxes, const std::vector&lt; std::string &gt; &amp;name_of_class)</div><div class="ttdoc">Applies Non Maximal Supression and eliminates the redundant overlapping bounding boxes.</div><div class="ttdef"><b>Definition:</b> human_object_detector.cpp:157</div></div>
-<div class="ttc" id="aclassHumanObjectDetector_html_a188a34269e4882506e11f6de0215ca01"><div class="ttname"><a href="classHumanObjectDetector.html#a188a34269e4882506e11f6de0215ca01">HumanObjectDetector::postProcessAlgorithm</a></div><div class="ttdeci">std::vector&lt; cv::Rect &gt; postProcessAlgorithm(std::vector&lt; cv::Mat &gt; &amp;preprocessed_data, cv::Mat &amp;image_in, const std::vector&lt; std::string &gt; &amp;name_of_class)</div><div class="ttdoc">Gets the valid class from the preprocessed blob.</div><div class="ttdef"><b>Definition:</b> human_object_detector.cpp:85</div></div>
-<div class="ttc" id="aclassHumanObjectDetector_html_aea6064b62bd530a7e964d0c57fb02976"><div class="ttname"><a href="classHumanObjectDetector.html#aea6064b62bd530a7e964d0c57fb02976">HumanObjectDetector::labelBox</a></div><div class="ttdeci">void labelBox(cv::Mat &amp;image_in, std::string label_value, int posTop, int posLeft)</div><div class="ttdoc">Function used to draw a label around the 'class-text. ' Creates a lable for the detected object,...</div><div class="ttdef"><b>Definition:</b> human_object_detector.cpp:38</div></div>
+<div class="ttc" id="aclassHumanObjectDetector_html_aad1bab7f21bc00e2d1f4a432fba6513c"><div class="ttname"><a href="classHumanObjectDetector.html#aad1bab7f21bc00e2d1f4a432fba6513c">HumanObjectDetector::postProcessAlgorithm</a></div><div class="ttdeci">std::vector&lt; cv::Rect &gt; postProcessAlgorithm(const std::vector&lt; cv::Mat &gt; &amp;preprocessed_data, const cv::Mat &amp;image_in, const std::vector&lt; std::string &gt; &amp;name_of_class)</div><div class="ttdoc">Gets the valid class from the preprocessed blob.</div><div class="ttdef"><b>Definition:</b> human_object_detector.cpp:86</div></div>
+<div class="ttc" id="aclassCamera_html"><div class="ttname"><a href="classCamera.html">Camera</a></div><div class="ttdef"><b>Definition:</b> object_detection.hpp:114</div></div>
+<div class="ttc" id="aclassBlobGenerator_html_ade36e6dc0e71715c4fc35ccb1c22ca5f"><div class="ttname"><a href="classBlobGenerator.html#ade36e6dc0e71715c4fc35ccb1c22ca5f">BlobGenerator::generateBlobFromImage</a></div><div class="ttdeci">void generateBlobFromImage(const cv::Mat &amp;image_in)</div><div class="ttdoc">Generates a blobs from a given image.</div><div class="ttdef"><b>Definition:</b> human_object_detector.cpp:15</div></div>
+<div class="ttc" id="aclassHumanObjectDetector_html_a783e3aff8f390a1c96c37f0ca7889550"><div class="ttname"><a href="classHumanObjectDetector.html#a783e3aff8f390a1c96c37f0ca7889550">HumanObjectDetector::applyNMSAndAppendRectanglesToImage</a></div><div class="ttdeci">cv::Mat applyNMSAndAppendRectanglesToImage(const cv::Mat &amp;image_in, const std::vector&lt; cv::Rect &gt; &amp;bounding_boxes, const std::vector&lt; std::string &gt; &amp;name_of_class)</div><div class="ttdoc">Applies Non Maximal Supression and eliminates the redundant overlapping bounding boxes.</div><div class="ttdef"><b>Definition:</b> human_object_detector.cpp:158</div></div>
+<div class="ttc" id="aclassHumanObjectDetector_html_a6d79bb2b3509df2dd2070ebe48d8a598"><div class="ttname"><a href="classHumanObjectDetector.html#a6d79bb2b3509df2dd2070ebe48d8a598">HumanObjectDetector::preProcessAlgorithm</a></div><div class="ttdeci">std::vector&lt; cv::Mat &gt; preProcessAlgorithm(cv::Mat blob, cv::dnn::Net net)</div><div class="ttdoc">Gets an image ready for prepocessing and converts an input image to a blob (forward propagate the inp...</div><div class="ttdef"><b>Definition:</b> human_object_detector.cpp:69</div></div>
 <div class="ttc" id="aclassHumanObjectDetector_html"><div class="ttname"><a href="classHumanObjectDetector.html">HumanObjectDetector</a></div><div class="ttdoc">Derived from BlobGenerator by inheritance, this class is used to detect humans in an image....</div><div class="ttdef"><b>Definition:</b> object_detection.hpp:44</div></div>
+<div class="ttc" id="aclassHumanObjectDetector_html_ac3b7cf709fdd38bbb6748e28081a885f"><div class="ttname"><a href="classHumanObjectDetector.html#ac3b7cf709fdd38bbb6748e28081a885f">HumanObjectDetector::labelBox</a></div><div class="ttdeci">void labelBox(const cv::Mat &amp;image_in, std::string label_value, int posTop, int posLeft)</div><div class="ttdoc">Function used to draw a label around the 'class-text. ' Creates a lable for the detected object,...</div><div class="ttdef"><b>Definition:</b> human_object_detector.cpp:38</div></div>
 <div class="ttc" id="aclassBlobGenerator_html_a66597a7f0c12237aa4f58f5fef4fed8a"><div class="ttname"><a href="classBlobGenerator.html#a66597a7f0c12237aa4f58f5fef4fed8a">BlobGenerator::getBlob</a></div><div class="ttdeci">cv::Mat getBlob()</div><div class="ttdoc">Gets a blob, its dimensions and prints its rows, columns, height and width values.</div><div class="ttdef"><b>Definition:</b> human_object_detector.cpp:25</div></div>
-<div class="ttc" id="aclassBlobGenerator_html_a70d9c7243527755a3200d929aabfcef9"><div class="ttname"><a href="classBlobGenerator.html#a70d9c7243527755a3200d929aabfcef9">BlobGenerator::generateBlobFromImage</a></div><div class="ttdeci">void generateBlobFromImage(cv::Mat &amp;image_in)</div><div class="ttdoc">Generates a blobs from a given image.</div><div class="ttdef"><b>Definition:</b> human_object_detector.cpp:15</div></div>
-<div class="ttc" id="aclassHumanObjectDetector_html_aa23478b014293a6625ad71d2360e2bfd"><div class="ttname"><a href="classHumanObjectDetector.html#aa23478b014293a6625ad71d2360e2bfd">HumanObjectDetector::preProcessAlgorithm</a></div><div class="ttdeci">std::vector&lt; cv::Mat &gt; preProcessAlgorithm(cv::Mat blob, cv::dnn::Net &amp;net)</div><div class="ttdoc">Gets an image ready for prepocessing and converts an input image to a blob (forward propagate the inp...</div><div class="ttdef"><b>Definition:</b> human_object_detector.cpp:68</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

@@ -12,7 +12,7 @@
 #include <constants.hpp>
 #include <object_detection.hpp>
 
-void BlobGenerator::generateBlobFromImage(cv::Mat &image_in) {
+void BlobGenerator::generateBlobFromImage(const cv::Mat &image_in) {
 /// displays dimension of image
 std::cout << "Dimensions of Image: " << image_in.size() << std::endl;
 std::cout << "Generating Blob from Image.." << std::endl;
@@ -35,8 +35,9 @@ std::cout<< "Blob Dimensions:" << N << "x" << C << "x"
 return blob;
 }
 
-void HumanObjectDetector:: labelBox(cv::Mat &image_in,
-std::string label_value, int posTop, int posLeft) {
+void HumanObjectDetector:: labelBox(const cv::Mat &image_in,
+std::string label_value,
+int posTop, int posLeft) {
     /// base_line is the y-coordinate of the bottom-most text
     int base_line;
     /// getTextSize also sets the base_line for the text.
@@ -66,7 +67,7 @@ std::string label_value, int posTop, int posLeft) {
 }
 
 std::vector<cv::Mat> HumanObjectDetector:: preProcessAlgorithm(
-    cv::Mat blob, cv::dnn::Net &net) {
+    cv::Mat blob, cv::dnn::Net net) {
     std::vector<cv::Mat> preprocessed_data;
     /// setting the blob as the input for the neural-network
     net.setInput(blob);
@@ -83,8 +84,8 @@ std::vector<cv::Mat> HumanObjectDetector:: preProcessAlgorithm(
 }
 
 std::vector<cv::Rect> HumanObjectDetector:: postProcessAlgorithm(
-std::vector<cv::Mat> &preprocessed_data,
-cv::Mat& image_in,
+const std::vector<cv::Mat> &preprocessed_data,
+const cv::Mat& image_in,
 const std::vector<std::string> &name_of_class) {
     /// the rows and columns of preprocessed data array
     int rows = preprocessed_data[0].size[1];
@@ -154,31 +155,115 @@ const std::vector<std::string> &name_of_class) {
 }
 
 cv::Mat HumanObjectDetector::
-applyNMSAndAppendRectanglesToImage(cv::Mat &image_in,
-std::vector<cv::Rect> &bounding_boxes,
+applyNMSAndAppendRectanglesToImage(const cv::Mat &image_in,
+const std::vector<cv::Rect> &bounding_boxes,
 const std::vector<std::string> &name_of_class) {
-    std::vector<int> idx;
     /// applying NMS
     cv::dnn::NMSBoxes(bounding_boxes, confidence_values,
     ODConstants::THRES_SCORE,
-    ODConstants::THRES_NMS, idx);
+    ODConstants::THRES_NMS, id_nms);
     std::cout<< "Number of Bounding boxes after NMS: "
-    << idx.size() << std::endl;
-    for (int i = 0; i < static_cast<int>(idx.size()); i++) {
-        if (name_of_class[ids[idx[i]]] == "person") {
-        cv::Rect bounding_box = bounding_boxes[idx[i]];
+    << id_nms.size() << std::endl;
+    int human_id = 1;
+    for (int i = 0; i < static_cast<int>(id_nms.size()); i++) {
+        if (name_of_class[ids[id_nms[i]]] == "person") {
+        /// gives each bounding-box
+        cv::Rect bounding_box = bounding_boxes[id_nms[i]];
         int posLeft = bounding_box.x;
         int posTop = bounding_box.y;
         int width_of_box = bounding_box.width;
         int height_of_box = bounding_box.height;
+        /// displaying robot-coordinate system
+        robotCoordinateConversion(bounding_box, human_id);
         /// drawing bounding box
         cv::rectangle(image_in, cv::Point(posLeft, posTop),
         cv::Point(posLeft + width_of_box, posTop + height_of_box),
-        ODConstants::B, 3*ODConstants::F_THICKNESS);
-        std::string label_value = name_of_class[ids[idx[i]]] +
-        cv::format("%.1f", confidence_values[idx[i]]);
+        ODConstants::B, 2*ODConstants::F_THICKNESS);
+        std::string label_value = name_of_class[ids[id_nms[i]]] +
+        cv::format("%.1f", confidence_values[id_nms[i]]) +
+        " id:" + std::to_string(human_id);
         labelBox(image_in, label_value, posTop, posLeft);
+        human_id++;
         }
     }
     return image_in;
+}
+
+void HumanObjectDetector::
+robotCoordinateConversion(const cv::Rect &bbox, int human_id) {
+double depth = focal_length * (avg_height_of_person/bbox.height);
+double pixel_to_cm_ratio = avg_height_of_person/bbox.height;
+std::cout << "The Robot Coordinates" << std::endl;
+std::cout << "The person is between with ID:" << human_id<< "("
+<< bbox.x * pixel_to_cm_ratio << "," << bbox.y * pixel_to_cm_ratio
+<< "," << depth << ") And ("
+<< (bbox.x + bbox.width) * pixel_to_cm_ratio << ","
+<< (bbox.y + bbox.height) * pixel_to_cm_ratio << ","
+<< depth << ")\n";
+}
+cv::Mat HumanObjectDetector::
+objectDetectorModel(cv::Mat image_in,
+cv::dnn::Net yolo_model,
+const std::vector<std::string> &class_list) {
+BlobGenerator Blob;
+Blob.generateBlobFromImage(image_in);
+cv::Mat blob = Blob.getBlob();
+std::vector<cv::Mat> preprocessed_data;
+preprocessed_data = preProcessAlgorithm(blob, yolo_model);
+bounding_boxes =
+postProcessAlgorithm(preprocessed_data,
+image_in, class_list);
+cv::Mat img = applyNMSAndAppendRectanglesToImage(image_in,
+bounding_boxes, class_list);
+// Clearing all the vectors
+bounding_boxes.clear();
+confidence_values.clear();
+ids.clear();
+detections.clear();
+id_nms.clear();
+return img;
+}
+
+cv::Mat Camera::getImageInput() {
+return image_in;
+}
+
+void Camera::runLiveDetector(bool live, bool test) {
+ifs.open(file_name.c_str());
+if(ifs.is_open()) {
+std::cout << "file " << file_name << " is open" << std::endl;
+while (std::getline(ifs, line)) {
+class_list.push_back(line);
+}
+} else {
+std::cout << "error with file opening" << std::endl;
+exit(1);
+}
+ifs.close();
+cv::namedWindow("Object Detection");
+if(live) {
+cv::VideoCapture cap(0);
+if(!cap.isOpened()) {
+std::cout << "Cannot Open Camera";
+}
+while (true) {
+    cap >> image_in;
+    img = HOD.objectDetectorModel(image_in, yolo_model,
+    class_list);
+    if (!test) {
+    cv::imshow("Object Detection", img);
+    cv::waitKey(25);
+    }
+}
+} else {
+    image_in = cv::imread("./../app/traffic.jpg", cv::IMREAD_COLOR);
+    std:: cout << "Test Image Dimensions"
+    << image_in.size[0];
+    img = HOD.objectDetectorModel(image_in, yolo_model,
+    class_list);
+    if (!test) {
+    cv::imshow("Object Detection", img);
+    cv::waitKey(0);
+    }
+}
 }

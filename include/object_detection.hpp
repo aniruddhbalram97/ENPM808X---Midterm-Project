@@ -28,7 +28,7 @@ class BlobGenerator {
         * 
         * @param image_in - input of image with Mat datatype
         */
-        void generateBlobFromImage(cv::Mat &image_in);
+        void generateBlobFromImage(const cv::Mat &image_in);
         /**
         * @brief Gets a blob, its dimensions and prints its rows, columns, height and width values
         * 
@@ -48,6 +48,12 @@ class HumanObjectDetector: public BlobGenerator {
         std::vector<cv::Rect> bounding_boxes;
         cv::dnn::Net net;
         std::vector<cv::Mat> detections;
+        std::vector<int> id_nms;
+        /// Assuming average height of every human in US is 170.018cm(5'7)
+        const double avg_height_of_person = 170.018;
+        /// Assuming focal length of our camera to be 1053
+        /// https://learnopencv.com/approximate-focal-length-for-webcams-and-cell-phone-cameras/
+        const double focal_length = 1053;
 
  public:
         /**
@@ -58,8 +64,8 @@ class HumanObjectDetector: public BlobGenerator {
         * @param posTop - top position pixel of the bounding-box
         * @param posLeft - left position pixel of the bounding-box
         */
-        void labelBox(cv::Mat& image_in,
-        std::string label_value, int posTop, int posLeft);
+        void labelBox(const cv::Mat &image_in, std::string label_value,
+        int posTop, int posLeft);
         /**
         * @brief Gets an image ready for prepocessing and converts an input image to a blob (forward propagate the input blob into a model).  
         * Trained on COCO 2017 dataset to obtain properties such as confidence and class prediction
@@ -68,7 +74,7 @@ class HumanObjectDetector: public BlobGenerator {
         * @return vector<Mat> 
         */
         std::vector<cv::Mat> preProcessAlgorithm(
-        cv::Mat blob, cv::dnn::Net &net);
+        cv::Mat blob, cv::dnn::Net net);
         /**
         * @brief  Gets the valid class from the preprocessed blob 
         * 
@@ -78,8 +84,8 @@ class HumanObjectDetector: public BlobGenerator {
         * @return vector<cv::Rect> 
         */
         std::vector<cv::Rect> postProcessAlgorithm(
-        std::vector<cv::Mat>& preprocessed_data,
-        cv::Mat& image_in,
+        const std::vector<cv::Mat>& preprocessed_data,
+        const cv::Mat& image_in,
         const std::vector<std::string>& name_of_class);
         /**
         * @brief Applies Non Maximal Supression and 
@@ -92,8 +98,33 @@ class HumanObjectDetector: public BlobGenerator {
         * names of classes defined in coco-dataset
         * @return Mat 
         */
-        cv::Mat applyNMSAndAppendRectanglesToImage(cv::Mat &image_in,
-        std::vector<cv::Rect> &bounding_boxes,
+        cv::Mat applyNMSAndAppendRectanglesToImage(
+        const cv::Mat &image_in,
+        const std::vector<cv::Rect> &bounding_boxes,
         const std::vector<std::string> &name_of_class);
+        void robotCoordinateConversion(const cv::Rect &bbox, int human_id);
+        cv::Mat objectDetectorModel(cv::Mat image_in,
+        cv::dnn::Net yolo_model,
+        const std::vector<std::string> &class_list);
+        std::vector<int> getNMSID() {
+              return id_nms;
+        }
 };
+
+class Camera: public HumanObjectDetector {
+ private:
+        std::vector<std::string> class_list;
+        HumanObjectDetector HOD;
+        std::ifstream ifs;
+        std::string line;
+        std::string file_name = "./../app/coco.names";
+        cv::dnn::Net yolo_model =
+        cv::dnn::readNet("./../app/models/YOLOv5s.onnx");
+        cv::Mat image_in;
+        cv::Mat img;
+ public:
+        void runLiveDetector(bool live, bool test);
+        cv::Mat getImageInput();
+};
+
 

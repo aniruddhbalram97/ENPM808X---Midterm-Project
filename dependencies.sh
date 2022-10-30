@@ -33,3 +33,6 @@ cd ../../
 sudo rm -rf opencv-4.5.1
 sudo rm -rf opencv_contrib-4.5.1
 echo "OpenCV installed."
+
+pip install torch==1.11.0
+echo "pytorch installed"
