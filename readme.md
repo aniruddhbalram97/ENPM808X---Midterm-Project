@@ -121,7 +121,8 @@ None
 https://drive.google.com/file/d/1SrriQnXhLH50-QhWuF40HRacuLYLgIPe/view?usp=sharing
 
 ### **Phase 2 Status video:**
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+https://drive.google.com/file/d/1P9eoFdX2hsKp64AmZSxWe-01QBlM37gv/view?usp=sharing
 
 ## **Known Issues/Bugs:**
 
