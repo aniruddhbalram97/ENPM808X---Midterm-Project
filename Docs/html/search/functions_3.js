@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['postprocessalgorithm_35',['postProcessAlgorithm',['../classHumanObjectDetector.html#a188a34269e4882506e11f6de0215ca01',1,'HumanObjectDetector']]],
-  ['preprocessalgorithm_36',['preProcessAlgorithm',['../classHumanObjectDetector.html#aa23478b014293a6625ad71d2360e2bfd',1,'HumanObjectDetector']]]
+  ['postprocessalgorithm_37',['postProcessAlgorithm',['../classHumanObjectDetector.html#aad1bab7f21bc00e2d1f4a432fba6513c',1,'HumanObjectDetector']]],
+  ['preprocessalgorithm_38',['preProcessAlgorithm',['../classHumanObjectDetector.html#a6d79bb2b3509df2dd2070ebe48d8a598',1,'HumanObjectDetector']]]
 ];

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>HUMAN OBJECT DETECTOR AND TRACKER: HumanObjectDetector Class Reference</title>
+<title>Human Object Detector: HumanObjectDetector Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,9 +21,8 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">HUMAN OBJECT DETECTOR AND TRACKER
+   <div id="projectname">Human Object Detector
    </div>
-   <div id="projectbrief">A C++ based application to detect and track humans</div>
   </td>
  </tr>
  </tbody>
@@ -81,6 +80,7 @@ Inheritance diagram for HumanObjectDetector:</div>
 <div class="center"><img src="classHumanObjectDetector__inherit__graph.png" border="0" usemap="#HumanObjectDetector_inherit__map" alt="Inheritance graph"/></div>
 <map name="HumanObjectDetector_inherit__map" id="HumanObjectDetector_inherit__map">
 <area shape="rect" title="Derived from BlobGenerator by inheritance, this class is used to detect humans in an image...." alt="" coords="5,80,172,107"/>
+<area shape="rect" href="classCamera.html" title=" " alt="" coords="52,155,125,181"/>
 <area shape="rect" href="classBlobGenerator.html" title="Used to generata blobes and get their dimensions." alt="" coords="31,5,147,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
@@ -96,23 +96,32 @@ Collaboration diagram for HumanObjectDetector:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aea6064b62bd530a7e964d0c57fb02976"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHumanObjectDetector.html#aea6064b62bd530a7e964d0c57fb02976">labelBox</a> (cv::Mat &amp;image_in, std::string label_value, int posTop, int posLeft)</td></tr>
-<tr class="memdesc:aea6064b62bd530a7e964d0c57fb02976"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function used to draw a label around the 'class-text. ' Creates a lable for the detected object, which is contained in a rectangle.  <a href="classHumanObjectDetector.html#aea6064b62bd530a7e964d0c57fb02976">More...</a><br /></td></tr>
-<tr class="separator:aea6064b62bd530a7e964d0c57fb02976"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa23478b014293a6625ad71d2360e2bfd"><td class="memItemLeft" align="right" valign="top">std::vector&lt; cv::Mat &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHumanObjectDetector.html#aa23478b014293a6625ad71d2360e2bfd">preProcessAlgorithm</a> (cv::Mat blob, cv::dnn::Net &amp;net)</td></tr>
-<tr class="memdesc:aa23478b014293a6625ad71d2360e2bfd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets an image ready for prepocessing and converts an input image to a blob (forward propagate the input blob into a model). <br  />
- Trained on COCO 2017 dataset to obtain properties such as confidence and class prediction.  <a href="classHumanObjectDetector.html#aa23478b014293a6625ad71d2360e2bfd">More...</a><br /></td></tr>
-<tr class="separator:aa23478b014293a6625ad71d2360e2bfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a188a34269e4882506e11f6de0215ca01"><td class="memItemLeft" align="right" valign="top">std::vector&lt; cv::Rect &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHumanObjectDetector.html#a188a34269e4882506e11f6de0215ca01">postProcessAlgorithm</a> (std::vector&lt; cv::Mat &gt; &amp;preprocessed_data, cv::Mat &amp;image_in, const std::vector&lt; std::string &gt; &amp;name_of_class)</td></tr>
-<tr class="memdesc:a188a34269e4882506e11f6de0215ca01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the valid class from the preprocessed blob.  <a href="classHumanObjectDetector.html#a188a34269e4882506e11f6de0215ca01">More...</a><br /></td></tr>
-<tr class="separator:a188a34269e4882506e11f6de0215ca01"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a22df9f13709921209a6801b992519599"><td class="memItemLeft" align="right" valign="top">cv::Mat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHumanObjectDetector.html#a22df9f13709921209a6801b992519599">applyNMSAndAppendRectanglesToImage</a> (cv::Mat &amp;image_in, std::vector&lt; cv::Rect &gt; &amp;bounding_boxes, const std::vector&lt; std::string &gt; &amp;name_of_class)</td></tr>
-<tr class="memdesc:a22df9f13709921209a6801b992519599"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies Non Maximal Supression and eliminates the redundant overlapping bounding boxes.  <a href="classHumanObjectDetector.html#a22df9f13709921209a6801b992519599">More...</a><br /></td></tr>
-<tr class="separator:a22df9f13709921209a6801b992519599"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3b7cf709fdd38bbb6748e28081a885f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHumanObjectDetector.html#ac3b7cf709fdd38bbb6748e28081a885f">labelBox</a> (const cv::Mat &amp;image_in, std::string label_value, int posTop, int posLeft)</td></tr>
+<tr class="memdesc:ac3b7cf709fdd38bbb6748e28081a885f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function used to draw a label around the 'class-text. ' Creates a lable for the detected object, which is contained in a rectangle.  <a href="classHumanObjectDetector.html#ac3b7cf709fdd38bbb6748e28081a885f">More...</a><br /></td></tr>
+<tr class="separator:ac3b7cf709fdd38bbb6748e28081a885f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d79bb2b3509df2dd2070ebe48d8a598"><td class="memItemLeft" align="right" valign="top">std::vector&lt; cv::Mat &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHumanObjectDetector.html#a6d79bb2b3509df2dd2070ebe48d8a598">preProcessAlgorithm</a> (cv::Mat blob, cv::dnn::Net net)</td></tr>
+<tr class="memdesc:a6d79bb2b3509df2dd2070ebe48d8a598"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets an image ready for prepocessing and converts an input image to a blob (forward propagate the input blob into a model). <br  />
+ Trained on COCO 2017 dataset to obtain properties such as confidence and class prediction.  <a href="classHumanObjectDetector.html#a6d79bb2b3509df2dd2070ebe48d8a598">More...</a><br /></td></tr>
+<tr class="separator:a6d79bb2b3509df2dd2070ebe48d8a598"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad1bab7f21bc00e2d1f4a432fba6513c"><td class="memItemLeft" align="right" valign="top">std::vector&lt; cv::Rect &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHumanObjectDetector.html#aad1bab7f21bc00e2d1f4a432fba6513c">postProcessAlgorithm</a> (const std::vector&lt; cv::Mat &gt; &amp;preprocessed_data, const cv::Mat &amp;image_in, const std::vector&lt; std::string &gt; &amp;name_of_class)</td></tr>
+<tr class="memdesc:aad1bab7f21bc00e2d1f4a432fba6513c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the valid class from the preprocessed blob.  <a href="classHumanObjectDetector.html#aad1bab7f21bc00e2d1f4a432fba6513c">More...</a><br /></td></tr>
+<tr class="separator:aad1bab7f21bc00e2d1f4a432fba6513c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a783e3aff8f390a1c96c37f0ca7889550"><td class="memItemLeft" align="right" valign="top">cv::Mat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHumanObjectDetector.html#a783e3aff8f390a1c96c37f0ca7889550">applyNMSAndAppendRectanglesToImage</a> (const cv::Mat &amp;image_in, const std::vector&lt; cv::Rect &gt; &amp;bounding_boxes, const std::vector&lt; std::string &gt; &amp;name_of_class)</td></tr>
+<tr class="memdesc:a783e3aff8f390a1c96c37f0ca7889550"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies Non Maximal Supression and eliminates the redundant overlapping bounding boxes.  <a href="classHumanObjectDetector.html#a783e3aff8f390a1c96c37f0ca7889550">More...</a><br /></td></tr>
+<tr class="separator:a783e3aff8f390a1c96c37f0ca7889550"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef63a799bb0db4e2330cc02ea139a45f"><td class="memItemLeft" align="right" valign="top"><a id="aef63a799bb0db4e2330cc02ea139a45f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>robotCoordinateConversion</b> (const cv::Rect &amp;bbox, int human_id)</td></tr>
+<tr class="separator:aef63a799bb0db4e2330cc02ea139a45f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55bde3d58178b3dec04180e49777e4d3"><td class="memItemLeft" align="right" valign="top"><a id="a55bde3d58178b3dec04180e49777e4d3"></a>
+cv::Mat&#160;</td><td class="memItemRight" valign="bottom"><b>objectDetectorModel</b> (cv::Mat image_in, cv::dnn::Net yolo_model, const std::vector&lt; std::string &gt; &amp;class_list)</td></tr>
+<tr class="separator:a55bde3d58178b3dec04180e49777e4d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73ac3e14bb5466248951c504c5451c54"><td class="memItemLeft" align="right" valign="top"><a id="a73ac3e14bb5466248951c504c5451c54"></a>
+std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getNMSID</b> ()</td></tr>
+<tr class="separator:a73ac3e14bb5466248951c504c5451c54"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classBlobGenerator"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classBlobGenerator')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classBlobGenerator.html">BlobGenerator</a></td></tr>
-<tr class="memitem:a70d9c7243527755a3200d929aabfcef9 inherit pub_methods_classBlobGenerator"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBlobGenerator.html#a70d9c7243527755a3200d929aabfcef9">generateBlobFromImage</a> (cv::Mat &amp;image_in)</td></tr>
-<tr class="memdesc:a70d9c7243527755a3200d929aabfcef9 inherit pub_methods_classBlobGenerator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates a blobs from a given image.  <a href="classBlobGenerator.html#a70d9c7243527755a3200d929aabfcef9">More...</a><br /></td></tr>
-<tr class="separator:a70d9c7243527755a3200d929aabfcef9 inherit pub_methods_classBlobGenerator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade36e6dc0e71715c4fc35ccb1c22ca5f inherit pub_methods_classBlobGenerator"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBlobGenerator.html#ade36e6dc0e71715c4fc35ccb1c22ca5f">generateBlobFromImage</a> (const cv::Mat &amp;image_in)</td></tr>
+<tr class="memdesc:ade36e6dc0e71715c4fc35ccb1c22ca5f inherit pub_methods_classBlobGenerator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates a blobs from a given image.  <a href="classBlobGenerator.html#ade36e6dc0e71715c4fc35ccb1c22ca5f">More...</a><br /></td></tr>
+<tr class="separator:ade36e6dc0e71715c4fc35ccb1c22ca5f inherit pub_methods_classBlobGenerator"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a66597a7f0c12237aa4f58f5fef4fed8a inherit pub_methods_classBlobGenerator"><td class="memItemLeft" align="right" valign="top">cv::Mat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBlobGenerator.html#a66597a7f0c12237aa4f58f5fef4fed8a">getBlob</a> ()</td></tr>
 <tr class="memdesc:a66597a7f0c12237aa4f58f5fef4fed8a inherit pub_methods_classBlobGenerator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a blob, its dimensions and prints its rows, columns, height and width values.  <a href="classBlobGenerator.html#a66597a7f0c12237aa4f58f5fef4fed8a">More...</a><br /></td></tr>
 <tr class="separator:a66597a7f0c12237aa4f58f5fef4fed8a inherit pub_methods_classBlobGenerator"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -121,8 +130,8 @@ Public Member Functions</h2></td></tr>
 <div class="textblock"><p>Derived from <a class="el" href="classBlobGenerator.html" title="Used to generata blobes and get their dimensions.">BlobGenerator</a> by inheritance, this class is used to detect humans in an image. This includes methods to draw bounding boxes, creating labels, blob conversion and post-processing <br  />
  </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a22df9f13709921209a6801b992519599"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a22df9f13709921209a6801b992519599">&#9670;&nbsp;</a></span>applyNMSAndAppendRectanglesToImage()</h2>
+<a id="a783e3aff8f390a1c96c37f0ca7889550"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a783e3aff8f390a1c96c37f0ca7889550">&#9670;&nbsp;</a></span>applyNMSAndAppendRectanglesToImage()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -130,13 +139,13 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">cv::Mat HumanObjectDetector::applyNMSAndAppendRectanglesToImage </td>
           <td>(</td>
-          <td class="paramtype">cv::Mat &amp;&#160;</td>
+          <td class="paramtype">const cv::Mat &amp;&#160;</td>
           <td class="paramname"><em>image_in</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; cv::Rect &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; cv::Rect &gt; &amp;&#160;</td>
           <td class="paramname"><em>bounding_boxes</em>, </td>
         </tr>
         <tr>
@@ -164,12 +173,14 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Mat </dd></dl>
 <p>applying NMS</p>
+<p>gives each bounding-box</p>
+<p>displaying robot-coordinate system</p>
 <p>drawing bounding box</p>
 
 </div>
 </div>
-<a id="aea6064b62bd530a7e964d0c57fb02976"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aea6064b62bd530a7e964d0c57fb02976">&#9670;&nbsp;</a></span>labelBox()</h2>
+<a id="ac3b7cf709fdd38bbb6748e28081a885f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3b7cf709fdd38bbb6748e28081a885f">&#9670;&nbsp;</a></span>labelBox()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -177,7 +188,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void HumanObjectDetector::labelBox </td>
           <td>(</td>
-          <td class="paramtype">cv::Mat &amp;&#160;</td>
+          <td class="paramtype">const cv::Mat &amp;&#160;</td>
           <td class="paramname"><em>image_in</em>, </td>
         </tr>
         <tr>
@@ -226,8 +237,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a188a34269e4882506e11f6de0215ca01"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a188a34269e4882506e11f6de0215ca01">&#9670;&nbsp;</a></span>postProcessAlgorithm()</h2>
+<a id="aad1bab7f21bc00e2d1f4a432fba6513c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad1bab7f21bc00e2d1f4a432fba6513c">&#9670;&nbsp;</a></span>postProcessAlgorithm()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -235,13 +246,13 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">std::vector&lt; cv::Rect &gt; HumanObjectDetector::postProcessAlgorithm </td>
           <td>(</td>
-          <td class="paramtype">std::vector&lt; cv::Mat &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; cv::Mat &gt; &amp;&#160;</td>
           <td class="paramname"><em>preprocessed_data</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">cv::Mat &amp;&#160;</td>
+          <td class="paramtype">const cv::Mat &amp;&#160;</td>
           <td class="paramname"><em>image_in</em>, </td>
         </tr>
         <tr>
@@ -285,8 +296,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="aa23478b014293a6625ad71d2360e2bfd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa23478b014293a6625ad71d2360e2bfd">&#9670;&nbsp;</a></span>preProcessAlgorithm()</h2>
+<a id="a6d79bb2b3509df2dd2070ebe48d8a598"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d79bb2b3509df2dd2070ebe48d8a598">&#9670;&nbsp;</a></span>preProcessAlgorithm()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -300,7 +311,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">cv::dnn::Net &amp;&#160;</td>
+          <td class="paramtype">cv::dnn::Net&#160;</td>
           <td class="paramname"><em>net</em>&#160;</td>
         </tr>
         <tr>

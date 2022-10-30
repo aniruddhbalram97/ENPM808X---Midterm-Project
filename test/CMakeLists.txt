@@ -4,7 +4,7 @@ add_executable(
     cpp-test
     main.cpp
     test.cpp
-    human_object_detector_test.cpp
+    ./../app/human_object_detector.cpp
 )
 
 INCLUDE_DIRECTORIES( ${OpenCV_INCLUDE_DIRS} )
